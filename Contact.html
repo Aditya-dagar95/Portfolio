@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Aditya Dagar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html">PortFolio</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+        <a href="contact.html" class="contact-btn active">LET'S TALK</a>
+    </nav>
+
+    <section class="contact-section">
+        <div class="contact-left">
+            <h1><span class="gradient-text">Get in Touch</span></h1>
+            <p>
+                I look forward to hearing from you and discussing how I can bring your
+                vision to life. Please feel free to reach out to me anytime.
+            </p>
+
+            <div class="contact-info">
+                <div class="info-item">
+                    <img src="Mail Icon.png" alt="Email Icon" class="icon" />
+                    <span>Designercore95@gmail.com</span>
+                </div>
+                <div class="info-item">
+                    <img src="Call Icon.png" alt="Phone Icon" class="icon" />
+                    <span>+91 7082419993</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-right">
+            <form id="contact-form">
+                <label>Your Name</label>
+                <input type="text" name="from_name" placeholder="Enter your name" required />
+
+                <label>Your E-mail</label>
+                <input type="email" name="from_email" placeholder="Enter your e-mail" required />
+
+                <label>Your Budget</label>
+                <input type="text" name="user_budget" placeholder="Enter your budget" />
+
+                <label>Tell me a bit more what you are looking for?</label>
+                <textarea name="message" rows="4" placeholder="Your message..." required></textarea>
+
+                <button type="submit" class="submit-btn">SUBMIT NOW</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            emailjs.init("OBAHb4G4qCSnbTO0W");
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            emailjs.sendForm('service_9bqus2b', 'template_nftu3br', this)  // <-- Replace with your actual template ID
+                .then(() => alert('Message sent successfully!'))
+                .catch(() => alert('Failed to send message. Please try again.'));
+        });
+    </script>
+
+    <section class="faq-section">
+        <div class="faq-left">
+            <h1>Frequently Asked <span class="gradient-text">Questions</span></h1>
+            <p>No project is too small; I'm here to help you achieve your design goals.</p>
+        </div>
+
+        <div class="faq-right">
+            <div class="faq-item">
+                <button class="faq-question">
+                    How long does a website take to build?
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Crafting a website's timeframe is akin to building a house: it varies! Basic sites take weeks;
+                        complex ones need months. The duration hinges on design, features, and content. Once we know
+                        your vision, we'll outline a timeline tailored to ensure a perfect digital space! 😊</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How much does a website cost?
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Let us ask you a question: how much does a car cost? 🤔 Depends on which one you want, right?
+                        There are SUVs, sedans, and hatchbacks to choose from. You have options like all-wheel drive,
+                        sunroof, etc. Similarly, website and app development costs vary depending on your project
+                        requirements, scope, and features. Thus, your budget determines the best we can do for you. Upon
+                        defining your budget, we'll let you know what it covers. 😊</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    I don’t have a design, can you build it for me?
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Certainly! We excel at crafting custom designs. Share your vision, and we'll create a unique,
+                        user-friendly website that represents your brand. Let's build your digital presence together!
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What services do you offer as a web designer?
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>As a web designer, I offer:</p>
+                    <ul>
+                        <li>Website design & development</li>
+                        <li>UX/UI design</li>
+                        <li>Responsive design for all devices</li>
+                        <li>Graphic design & content integration</li>
+                        <li>E-commerce solutions</li>
+                        <li>Redesigning existing sites</li>
+                        <li>Email signature design</li>
+                        <li>Dashboard development</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is post-design website support available?
+                    <span class="arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, post-design website support is available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                item.classList.toggle('active');
+                faqItems.forEach(other => {
+                    if (other !== item) other.classList.remove('active');
+                });
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top-line"></div>
+        <div class="footer-content">
+
+            <div class="footer-left">
+                <div class="footer-logo">PortFolio</div>
+                <p class="footer-copyright">© Designed by Aditya Dagar</p>
+            </div>
+
+            <div class="footer-right">
+                <nav class="footer-nav">
+                    <span>Home</span>
+                    <span>About</span>
+                    <span>Contact</span>
+                </nav>
+                <div class="footer-socials">
+                    <div class="social-link">
+                        <!-- Replace with your LinkedIn icon image -->
+                        <img src="Linkdin icon.png" alt="LinkedIn">
+                    </div>
+                    <div class="social-link">
+                        <!-- Replace with your WhatsApp icon image -->
+                        <img src="Whatsapp icon.png" alt="WhatsApp">
+                    </div>
+                    <div class="social-link">
+                        <!-- Replace with your Instagram icon image -->
+                        <img src="Instagram Icon.png" alt="Instagram">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
