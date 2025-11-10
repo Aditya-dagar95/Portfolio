@@ -216,3 +216,172 @@ body {
   list-style: disc;
   margin: 10px 0 0 20px;
 }
+
+
+/* ==============================================
+   CONTACT FORM RESPONSIVE IMPROVEMENTS
+   ============================================== */
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  /* reduced gap for balance */
+  padding: 40px 20px;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 40px;
+}
+
+.contact-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-right {
+  flex: 1;
+  min-width: 320px;
+  background: #121212;
+  padding: 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form Layout Fix */
+form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Labels */
+form label {
+  display: block;
+  font-size: 15px;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+/* Input fields */
+form input,
+form textarea {
+  width: 100%;
+  background: #1a1a1a;
+  border: none;
+  border-radius: 10px;
+  padding: 18px 20px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.4;
+  resize: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Hover/focus states */
+form input:focus,
+form textarea:focus {
+  border: 1px solid #FF9155;
+  background: #1d1d1d;
+}
+
+/* Placeholder color */
+form input::placeholder,
+form textarea::placeholder {
+  color: #888;
+  font-size: 15px;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(90deg, #B16CEA 0%, #C769C6 20%, #FE5F6B 50%, #FF9155 82%, #FFA74C 100%);
+  border: none;
+  padding: 18px 0;
+  border-radius: 30px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 145, 85, 0.4);
+}
+
+/* ---------------- MOBILE RESPONSIVENESS ---------------- */
+@media (max-width: 768px) {
+  .projects-header {
+    gap: 15px;
+    /* smaller gap for phones */
+    padding: 20px 15px;
+    margin-bottom: 15px;
+  }
+
+
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .contact-right {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 25px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  form input,
+  form textarea {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+
+  .submit-btn {
+    padding: 16px;
+    font-size: 15px;
+  }
+
+  .contact-left h1 {
+    font-size: 50px;
+  }
+
+  .contact-left p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .contact-right {
+    padding: 30px 20px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 14px;
+  }
+}
