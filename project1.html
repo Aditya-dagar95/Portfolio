@@ -6,84 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Aditya Dagar</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project1.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
-<style>
-    .image-placeholder {
-        display: flex;
-        justify-content: center;
-        /* Centers the image horizontally */
-        align-items: center;
-        /* Centers vertically if inside a section */
-        width: 100%;
-        margin: 40px auto;
-        /* Adds spacing from top and bottom */
-    }
 
-    .image-placeholder img {
-        width: 1318px;
-        height: 6637px;
-        /* ← Change this to any height you want */
-        object-fit: cover;
-        /* Keeps image proportion and fills nicely */
-        border-radius: 12px;
-        /* Optional for smooth corners */
-    }
-    .projects-title{
-        padding-left: 130px;
-        padding-top: 20px;
-    }
-    .projects-description{
-        padding-right: 130px;
-        padding-top: 20px;
-    }
-    .projects-title-white{
-        width: 350px;
-    }
-    .projects-description2{
-        width: 600px;
-        color: rgb(201, 201, 201);
-        padding-right: 150px;
-        padding-top: 20px;
-        font-size: 16px
-        
-    }
-    .projects-header{
-        gap: 400px;
+<style>
+    @media (max-width: 768px) {
+        .projects-header {
+            gap: 15px;
+            /* smaller gap for phones */
+            padding: 20px 15px;
+            margin-bottom: 15px;
+        }
     }
 </style>
 
 <body>
 
+    <!-- Navigation -->
     <nav>
         <div class="logo">
-            <a href="main.html">PortFolio</a>
+            <a href="index.html">PortFolio</a>
         </div>
         <ul class="nav-links">
-            <li><a href="main.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="projects.html">Projects</a></li>
         </ul>
-        <a href="contact.html" class="contact-btn">LET'S TALK</a>
+        <a href="Contact.html" style="text-decoration: none;">
+            <button class="contact-btn">LET'S TALK</button>
+        </a>
     </nav>
-    <div class="projects-header">
-        <h2 class="projects-title">
-            <span class="projects-title-white">Look at My</span>
-            <span class="projects-title-gradient">Projects.</span>
-        </h2>
-        <p class="projects-description2">
-            This showcase not only highlights my design skills but also conveys my commitment to creating solutions
-            that resonate with users. Explore my work and you'll witness the art and science of UI/UX design at its
-            finest!
-        </p>
-    </div>
+    <section class="projects-section">
+        <div class="projects-header">
+            <h1>Look at My <span>Projects.</span></h1>
+            <p class="projects-description2">
+                This showcase not only highlights my design skills but also conveys my commitment
+                to creating solutions that resonate with users. Explore my work and you'll witness
+                the art and science of UI/UX design at its finest!
+            </p>
+        </div>
 
-    <div class="image-placeholder">
-        <img src="Portfolio 1.png" alt="Placeholder Image">
-    </div>
+        <div class="project-image-container">
+            <img src="Portfolio 1.png" alt="Project 1">
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer>
@@ -97,22 +68,28 @@
 
             <div class="footer-right">
                 <nav class="footer-nav">
-                    <span>Home</span>
-                    <span>About</span>
-                    <span>Contact</span>
+                    <span><a href="index.html" style="text-decoration: none; color: inherit;">Home</a></span>
+                    <span><a href="about.html" style="text-decoration: none; color: inherit;">About</a></span>
+                    <span><a href="Contact.html" style="text-decoration: none; color: inherit;">Contact</a></span>
                 </nav>
+
                 <div class="footer-socials">
                     <div class="social-link">
-                        <!-- Replace with your LinkedIn icon image -->
-                        <img src="Linkdin icon.png" alt="LinkedIn">
+                        <a href="https://www.linkedin.com/in/adityadagar95/" target="_blank"
+                            style="text-decoration: none;">
+                            <img src="Linkdin icon.png" alt="LinkedIn">
+                        </a>
                     </div>
                     <div class="social-link">
-                        <!-- Replace with your WhatsApp icon image -->
-                        <img src="Whatsapp icon.png" alt="WhatsApp">
+                        <a href="https://wa.me/917082419993" target="_blank" style="text-decoration: none;">
+                            <img src="Whatsapp icon.png" alt="WhatsApp">
+                        </a>
                     </div>
                     <div class="social-link">
-                        <!-- Replace with your Instagram icon image -->
-                        <img src="Instagram Icon.png" alt="Instagram">
+                        <a href="https://www.instagram.com/adityadagar_95?igsh=MW93cHRicmRiOThkZg==" target="_blank"
+                            style="text-decoration: none;">
+                            <img src="Instagram Icon.png" alt="Instagram">
+                        </a>
                     </div>
                 </div>
             </div>
