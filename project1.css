@@ -1,0 +1,184 @@
+    .image-placeholder {
+        display: flex;
+        justify-content: center;
+        /* Centers the image horizontally */
+        align-items: center;
+        /* Centers vertically if inside a section */
+        width: 100%;
+        margin: 40px auto;
+        /* Adds spacing from top and bottom */
+    }
+
+    .image-placeholder img {
+        width: 1318px;
+        height: 6637px;
+        /* ← Change this to any height you want */
+        object-fit: cover;
+        /* Keeps image proportion and fills nicely */
+        border-radius: 12px;
+        /* Optional for smooth corners */
+    }
+    .projects-title{
+        padding-left: 130px;
+        padding-top: 20px;
+    }
+    .projects-description{
+        padding-right: 130px;
+        padding-top: 20px;
+    }
+    .projects-title-white{
+        width: 350px;
+    }
+    .projects-description2{
+        width: 600px;
+        color: rgb(201, 201, 201);
+        padding-right: 150px;
+        padding-top: 20px;
+        font-size: 16px
+        
+    }
+    .projects-header{
+        gap: 400px;
+    }
+
+/* ==============================================
+   PROJECT PAGE RESPONSIVE FIX (Aditya Dagar)
+   ============================================== */
+
+/* Base responsive setup */
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.projects-header h1 {
+  font-size: 48px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.projects-header h1 span {
+  background: linear-gradient(90deg, #B16CEA 0%, #C769C6 20%, #FE5F6B 50%, #FF9155 82%, #FFA74C 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-description2 {
+  color: #bdbdbd;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Image container fix */
+.project-image-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 40px auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Fix unwanted empty space around image */
+.projects-section img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .projects-header h1 {
+    font-size: 40px;
+  }
+
+  .projects-description2 {
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 90%;
+  }
+
+  .project-image-container {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 40px 15px;
+  }
+
+  .projects-header h1 {
+    font-size: 34px;
+  }
+
+  .projects-description2 {
+    font-size: 16px;
+    max-width: 95%;
+    line-height: 1.6;
+  }
+
+  .project-image-container {
+    width: 100%;
+    margin: 25px 0;
+    border-radius: 8px;
+  }
+
+  .project-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 30px 10px;
+  }
+
+  .projects-header h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .projects-description2 {
+    font-size: 15px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .project-image-container {
+    border-radius: 6px;
+    margin: 20px 0;
+  }
+
+  .project-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
